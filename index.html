@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Process Apostle</title>
   <style>
-    /* Base Resets */
+    /* Base Resets & Smooth Scroll */
     * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #111111; color: #ffffff; }
 
     /* Full-Screen Hero Container */
@@ -42,7 +43,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.55); /* Increase/decrease for contrast */
+      background: rgba(0, 0, 0, 0.55);
       z-index: 2;
     }
 
@@ -84,6 +85,56 @@
       background: #ffffff;
       color: #111111;
     }
+
+    /* Navigation Hub Section */
+    .hub-container {
+      min-height: 100vh;
+      padding: 80px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hub-title {
+      font-size: 2.2rem;
+      margin-bottom: 40px;
+      letter-spacing: 1px;
+      border-bottom: 2px solid #333333;
+      padding-bottom: 10px;
+    }
+
+    .hub-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      width: 100%;
+    }
+
+    .hub-card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 20px;
+      background: #1e1e1e;
+      border: 1px solid #333333;
+      border-radius: 12px;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .hub-card:hover {
+      background: #ffffff;
+      color: #111111;
+      transform: translateY(-5px);
+      border-color: #ffffff;
+    }
   </style>
 </head>
 <body>
@@ -100,9 +151,20 @@
     <div class="hero-content">
       <h1 class="hero-title">Process Apostle</h1>
       <p class="hero-subtitle">Workflow, Purpose & Weekly Insights</p>
-      <a href="#about" class="hero-btn">Explore Site</a>
+      <a href="#menu-hub" class="hero-btn">Explore Site</a>
     </div>
   </header>
+
+  <!-- Navigation Hub Section -->
+  <main id="menu-hub" class="hub-container">
+    <h2 class="hub-title">Explore Site</h2>
+    <div class="hub-grid">
+      <a href="#about" class="hub-card">About</a>
+      <a href="#article" class="hub-card">Article of the Week</a>
+      <a href="#videos" class="hub-card">Video Collections</a>
+      <a href="#contact" class="hub-card">Contact Me</a>
+    </div>
+  </main>
 
 </body>
 </html>
