@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Process Apostle</title>
+  <style>
+    /* Base Resets */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #111111; color: #ffffff; }
+
+    /* Full-Screen Hero Container */
+    .hero-container {
+      position: relative;
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    /* Background Video */
+    #hero-video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    /* Dark Semi-Transparent Overlay */
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.55);
+      z-index: 2;
+    }
+
+    /* Hero Text & Button Styling */
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      color: #ffffff;
+      padding: 0 20px;
+    }
+
+    .hero-title {
+      font-size: 3.5rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+
+    .hero-subtitle {
+      font-size: 1.4rem;
+      font-weight: 300;
+      margin-bottom: 30px;
+      color: #e0e0e0;
+    }
+
+    .hero-btn {
+      display: inline-block;
+      padding: 12px 30px;
+      color: #ffffff;
+      border: 2px solid #ffffff;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .hero-btn:hover {
+      background: #ffffff;
+      color: #111111;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <header class="hero-container">
+    <video autoplay muted loop playsinline id="hero-video">
+      <source src="hero-bg.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <h1 class="hero-title">Process Apostle</h1>
+      <p class="hero-subtitle">Workflow, Purpose & Weekly Insights</p>
+      <a href="#about" class="hero-btn">Explore Site</a>
+    </div>
+  </header>
+
+</body>
+</html>
