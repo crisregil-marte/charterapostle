@@ -1,0 +1,4 @@
+title: Local Storage
+description: Testing whether Keystatic saves directly to this project.
+buttonLabel: Visit Test
+destinationUrl: https://example.com
