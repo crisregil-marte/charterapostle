@@ -1,0 +1,38 @@
+
+---
+import '../styles.css';
+
+export interface Props {
+  title: string;
+  showBackgroundVideo?: boolean;
+}
+
+const { title, showBackgroundVideo = true } = Astro.props;
+const base = import.meta.env.BASE_URL;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    {showBackgroundVideo && (
+      <>
+        <video class="site-background-video" autoplay muted loop playsinline aria-hidden="true">
+          <source src={`${base}hero-bg.mp4`} type="video/mp4" />
+        </video>
+        <div class="site-background-overlay"></div>
+      </>
+    )}
+
+    <main class="site-content">
+      <slot />
+    </main>
+  </body>
+</html>

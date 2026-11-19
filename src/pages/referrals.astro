@@ -1,0 +1,91 @@
+
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+
+export const prerender = true;
+
+const referrals = await getCollection('referrals');
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout title="Referrals & Recommendations | Process Apostle">
+
+  <!-- Header -->
+  <header class="page-header">
+    <div class="header-content">
+      <a href={base} class="site-brand">Process Apostle</a>
+      <a href={base} class="back-btn">← Back to Home</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+
+    <h1 class="page-title">Referrals & Recommendations</h1>
+
+    <p class="page-subtitle">
+      Curated tools, platforms, and resources we use and recommend.
+    </p>
+
+    <!-- Dynamic Referral Collection -->
+    <div class="grid">
+
+      {referrals.map((referral) => (
+        <article class="card">
+
+          <div>
+            {referral.data.logo && (
+              <img
+                src={referral.data.logo}
+                alt={`${referral.data.title} logo`}
+                loading="lazy"
+                style="max-width:120px; max-height:80px; object-fit:contain; margin-bottom:15px;"
+              />
+            )}
+
+            <h3>{referral.data.title}</h3>
+
+            <p>{referral.data.description}</p>
+          </div>
+
+          <a
+            href={referral.data.destinationUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="card-btn"
+          >
+            {referral.data.buttonLabel}
+          </a>
+
+        </article>
+      ))}
+
+      {referrals.length === 0 && (
+        <p>No referrals have been published yet.</p>
+      )}
+
+    </div>
+
+    <!-- Collaboration Section -->
+    <div class="info-box">
+      <h3>Want to Collaborate?</h3>
+
+      <p>
+        If you have a tool, project, or platform you'd like to
+        feature here, get in touch with us.
+      </p>
+
+      <p>
+        Partnership contact information will be available here.
+      </p>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Process Apostle.</p>
+  </footer>
+
+</Layout>
