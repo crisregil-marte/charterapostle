@@ -7,6 +7,7 @@ export default config({
   ? {
       kind: 'github',
       repo: 'crisregil-marte/charterapostle',
+      branch: 'content-staging',
     }
   : {
       kind: 'local',
