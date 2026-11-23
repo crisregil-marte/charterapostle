@@ -23,6 +23,7 @@ articleHeading: Article of the Week
 contactHeading: Contact Us
 contactDescription: Have questions, feedback, or ideas to share? Feel free to connect below.
 contactEmail: processapostle@proton.me
+contactProcessImage: /images/contact/contactProcessImage.jpg
 contactProcessHeading: Basic Consultation Process
 emailButtonLabel: Email Us
 githubUrl: https://github.com/crisregil-marte
