@@ -16,15 +16,14 @@ missionDescription: >-
   Documenting practical processes, goal tracking, and strategic milestones to
   empower personal and technical growth.
 focusHeading: Weekly Focus
-focusDescription: >
+focusDescription: >-
   Every week, we break down actionable ideas, curated articles, and media
   projects designed to build long-term momentum.
 articleHeading: Article of the Week
 contactHeading: Contact Us
 contactDescription: Have questions, feedback, or ideas to share? Feel free to connect below.
 contactEmail: processapostle@proton.me
-contactProcessImage: /images/contact/contactProcessImage.jpg
-contactProcessHeading: Our Consultation Works
+contactProcessHeading: Basic Consultation Process
 emailButtonLabel: Email Us
 githubUrl: https://github.com/crisregil-marte
 githubButtonLabel: GitHub Profile
