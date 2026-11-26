@@ -588,7 +588,7 @@ footer {
   position: relative;
   z-index: 2;
   min-height: 100vh;
-  background-color: #111111;
+  background-color: transparent;
   color: #ffffff;
   padding: 35px 20px 50px;
 }
